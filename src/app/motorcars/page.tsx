@@ -1,7 +1,7 @@
-import Cardm3 from "./Cardm3";
-import "./globals.css";
+import Cardm3 from "../Cardm3";
 
-export default function Home() {
+
+const page = () => {
   const CarsInfo = [
     {
       id: 0,
@@ -102,7 +102,7 @@ export default function Home() {
   ];
   return (
     <>
-      <div id="Root">
+    <div id="Root">
         <div className="w-full h-screen">
           <div className="w-[87%] m-auto border grid grid-cols-4 grid-flow-row gap-y-5">
             {CarsInfo.map((CI) => (
@@ -118,5 +118,7 @@ export default function Home() {
         </div>
       </div>
     </>
-  );
+  )
 }
+
+export default page
