@@ -220,7 +220,7 @@ export default function page({ params }: { params: { motorcarid: number } }) {
     {
       id: 4,
       name: "Mercedez Seller",
-      pNo: "+SUZ-991122KI",
+      pNo: "+Mer-991122KI",
       location: "City XYZ",
       email: "mercedez.seller@example.com",
       car: {
