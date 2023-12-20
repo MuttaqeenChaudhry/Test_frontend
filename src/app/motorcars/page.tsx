@@ -1,7 +1,15 @@
 import Cardm3 from "../Cardm3";
 
 
-const page = () => {
+const page = async () => {
+  const AllAds = await fetch('http://localhost:3001/motorcars/',{
+    method : 'GET',
+    headers : {
+      'Content-Type' : 'application/json'
+    }
+  });
+  const ParsedAds = await AllAds.json();
+  console.log(ParsedAds[0]._id);
   const CarsInfo = [
     {
       id: 0,
@@ -9,7 +17,7 @@ const page = () => {
       imgURL:
         "https://img.freepik.com/free-photo/white-offroader-jeep-parking_114579-4007.jpg?w=1060&t=st=1702908330~exp=1702908930~hmac=753e531cc19a2e028ab9781550e45e88a717e7c1c747a6713314da108ae29301",
       description: "Sligtly used, No scratches and so on.",
-      details: "http://localhost:3000/motorcars/0",
+      refLink: "http://localhost:3000/motorcars/0",
     },
     {
       id: 1,
@@ -105,13 +113,20 @@ const page = () => {
     <div id="Root">
         <div className="w-full h-screen">
           <div className="w-[87%] m-auto border grid grid-cols-4 grid-flow-row gap-y-5">
-            {CarsInfo.map((CI) => (
+            {ParsedAds.map((CI : {
+              _id : String,
+              name : String,
+              car : {
+                imgURL : String
+              },
+              pNo : Number,
+            }) => (
               <Cardm3
-                id={CI.id}
-                title={CI.title}
-                img={CI.imgURL}
-                description={CI.description}
-                details={CI.details}
+                id={CI._id}
+                title={CI.name}
+                img={CI.car.imgURL}
+                description={CI.pNo}
+                refLink={CI.details}
               />
             ))}
           </div>
