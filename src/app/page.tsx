@@ -9,7 +9,6 @@ export default async function Home() {
     }
   });
   const AdsParsed = await FetchAds.json();
-  console.log(AdsParsed) 
   const CarsInfo = [
     {
       id: 0,

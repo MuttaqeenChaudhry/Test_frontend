@@ -8,7 +8,7 @@ export default function page({ params }: { params: { motorcarid : number } }) {
   
   useEffect(()=>{
     const fetchData = async ()=> {
-    const FetchAd = await fetch(`http://localhost:3001/motorcars/ad?Ad_id=${params.motorcarid }`,{
+    const FetchAd = await fetch(`http://localhost:3001/motorcars/ad?Ad_id=${params.motorcarid}`,{
     method : 'GET', headers : {
       'Content-Type' : 'application/json',
       'Cache-Control' : 'no-cache'
@@ -19,7 +19,7 @@ export default function page({ params }: { params: { motorcarid : number } }) {
   }
   fetchData();
   },[params.motorcarid]);
-  
+
 
   return (
     <>

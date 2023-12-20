@@ -45,11 +45,11 @@ const carousel = (props) => {
               </div>
             </div>
             <div id="CarouselContainer" className="overflow-hidden">
-              <img src={props.img0} alt="" className="w-[800px] h-[500px] caroImg" />
-              <img src={props.img1} alt="" className="w-[800px] h-[500px] caroImg" />
-              <img src={props.img2} alt="" className="w-[800px] h-[500px] caroImg" />
-              <img src={props.img3} alt="" className="w-[800px] h-[500px] caroImg" />
-              <img src={props.img4} alt="" className="w-[800px] h-[500px] caroImg" />
+              <img src={props.img0} alt="Owner Removed Pic" className="w-[800px] h-[500px] caroImg" />
+              <img src={props.img1} alt="Owner Removed Pic2" className="w-[800px] h-[500px] caroImg" />
+              <img src={props.img2} alt="Owner Removed Pic3" className="w-[800px] h-[500px] caroImg" />
+              <img src={props.img3} alt="Owner Removed Pic4" className="w-[800px] h-[500px] caroImg" />
+              <img src={props.img4} alt="Owner Removed Pic5" className="w-[800px] h-[500px] caroImg" />
 
             </div>
           </div>
