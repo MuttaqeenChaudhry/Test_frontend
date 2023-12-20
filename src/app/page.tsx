@@ -1,7 +1,15 @@
 import Cardm3 from "./Cardm3";
 import "./globals.css";
 
-export default function Home() {
+export default async function Home() {
+  const FetchAds = await fetch('http://localhost:3001/motorcars/' , {
+    method : 'GET',
+    headers : {
+      'Content-Type' : 'application/json'
+    }
+  });
+  const AdsParsed = await FetchAds.json();
+  console.log(AdsParsed) 
   const CarsInfo = [
     {
       id: 0,
