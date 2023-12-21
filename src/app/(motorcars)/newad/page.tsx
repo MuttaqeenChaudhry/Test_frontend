@@ -95,7 +95,7 @@ export default function page() {
         alert('Submission Successful');
       }
       else {
-        alert('There Seems to be an issue with your browser')
+        alert('All Fields Should be Field')
       }
 
 
@@ -105,7 +105,7 @@ export default function page() {
     <>
       <div>
         <div>
-          <div className="w-[98%] m-auto mt-9">
+          <div className="w-[98%] m-auto">
             <fieldset className="border border-black">
               <legend className="w-fit m-auto">Ad For New Car</legend>
               <form onSubmit={CaptureData}>
@@ -318,7 +318,7 @@ export default function page() {
                         value="false"
                         id=""
                       />
-                      <fieldset className="ml-2 border p-2 border-black w-fit">
+                      <fieldset className="border p-2 border-black w-fit">
                         <legend className="ml-2">Documentaion</legend>
                         <label htmlFor="title">Title</label>
                         <input

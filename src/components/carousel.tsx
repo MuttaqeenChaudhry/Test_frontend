@@ -1,19 +1,25 @@
 import React, { useEffect } from "react";
 
-const carousel = (props) => {
+const carousel = (props : {name : string, img0 : string, img1 : string,
+   img2 : string, img3 : string, img4 : string, pNo : string,
+  location : string, email : string, carMake : string, carModel : string,
+carYear : number, carColor : string, carMileage: number, carVin: string,
+carCondition : string, carSh1 : string, carSh2 : string, askPrice : number,
+negotiable : boolean, reasonFs : string, payMeth: string, tdAv : boolean,
+insAl : boolean, saletrm : string, title : string, regist : string}) => {
     useEffect(()=>{
-        const prevBtn = document.getElementById('prevBtn');
-        const nxtBtn = document.getElementById('nxtBtn');
-        const CarouselContainer = document.getElementById('CarouselContainer');
+        const prevBtn = document.getElementById('prevBtn') as HTMLElement;
+        const nxtBtn = document.getElementById('nxtBtn') as HTMLElement;
+        const CarouselContainer = document.getElementById('CarouselContainer') as HTMLElement;
         const Imgs = CarouselContainer.querySelectorAll('.caroImg');
         console.log(Imgs)
         let initIndex = 0;
-        const showImg = (index) =>{
+        const showImg = (index : number) =>{
             Imgs.forEach((img, counter)=>{
                 if(counter === index)
-                img.style.display = 'block';
+                (img as HTMLElement).style.display = 'block';
                 else
-                img.style.display = 'none';
+                (img as HTMLElement).style.display = 'none';
             })
         }   
         prevBtn.addEventListener('click', ()=>{
